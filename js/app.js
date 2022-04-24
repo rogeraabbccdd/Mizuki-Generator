@@ -55,7 +55,7 @@ const app = Vue.createApp({
         ctx.restore()
       }
       // Draw Texts
-      const fonts = 'source-serif-pro'
+      const fonts = 'source-serif-pro, PMingLiU, 新細明體, LiSong Pro, serif'
       colorText(input.value.id, 1430, 1325, 'bold #000', '70px ' + fonts, 'left')
       colorText(input.value.grade, 559, 490, 'bold #000', '80px ' + fonts, 'left')
       colorText(input.value.class, 695, 490, 'bold #000', '80px ' + fonts, 'center')
