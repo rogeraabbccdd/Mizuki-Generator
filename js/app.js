@@ -45,13 +45,15 @@ const app = Vue.createApp({
       ctx.drawImage(templateImage, 0, 0)
       // Draw avatar
       if(input.value.avatar) {
-        const ratio = 650 / input.value.avatar.width
         const maxHeight = 900
+        const maxWidth = 650
+        const ratio = Math.min(650 / input.value.avatar.width, maxHeight / input.value.avatar.height)
         const y = (350 + (maxHeight - input.value.avatar.height * ratio) / 2)
+        const x = (1200 + (maxWidth - input.value.avatar.width * ratio) / 2)
         ctx.save()
-        roundedImage(1200, y, 650, input.value.avatar.height * ratio, 0)
+        roundedImage(x, y, input.value.avatar.width * ratio, input.value.avatar.height * ratio, 0)
         ctx.clip()
-        ctx.drawImage(input.value.avatar, 1200, y, 650, input.value.avatar.height * ratio)
+        ctx.drawImage(input.value.avatar, x, y, input.value.avatar.width * ratio, input.value.avatar.height * ratio)
         ctx.restore()
       }
       // Draw Texts
