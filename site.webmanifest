@@ -1,0 +1,20 @@
+{
+    "name": "私立子午学園学生証",
+    "short_name": "私立子午学園学生証",
+    "start_url": "./index.html",
+    "icons": [
+        {
+            "src": "./assets/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./assets/android-chrome-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#89ced1",
+    "background_color": "#89ced1",
+    "display": "standalone"
+}
