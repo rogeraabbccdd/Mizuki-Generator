@@ -74,7 +74,7 @@ const app = Vue.createApp({
 
     const download = () => {
       const link = document.createElement('a')
-      link.download = ' Mizuki.png'
+      link.download = 'Mizuki.png'
       link.href = canvas.value.toDataURL()
       link.click()
     }
